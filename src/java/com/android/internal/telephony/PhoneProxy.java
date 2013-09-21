@@ -161,7 +161,8 @@ public class PhoneProxy extends Handler implements Phone {
                     logd("LTE ON CDMA property is set. Already CDMA Phone" +
                             " newVoiceRadioTech = " + newVoiceRadioTech +
                             " Active Phone = " + mActivePhone.getPhoneName());
-                    return;
+                    mIccCardProxy.setVoiceRadioTech(newVoiceRadioTech);
+					return;
                 } else {
                     logd("LTE ON CDMA property is set. Switch to CDMALTEPhone" +
                             " newVoiceRadioTech = " + newVoiceRadioTech +
